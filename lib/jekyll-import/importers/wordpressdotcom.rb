@@ -179,7 +179,7 @@ module JekyllImport
             File.open(File.join(item.directory_name, item.file_name), "w") do |f|
               f.puts header.to_yaml
               f.puts '---'
-              f.puts Util.wpautop(content.to_html)
+              f.puts content.to_html
             end
           rescue => e
             puts "Couldn't import post!"
